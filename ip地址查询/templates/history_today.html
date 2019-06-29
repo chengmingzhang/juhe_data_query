@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历史今天</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <style>
+        .content table{
+            margin: 10px auto;
+            width: 60%;
+        }
+        .content table th{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <table class="table table-striped">
+        <thead>
+            <th align="left">时间</th>
+            <th align="left">事件</th>
+            <th align="left">概述</th>
+        </thead>
+        {% for item in items %}
+            <tr>
+            <td align="left">{{ item['_id'] }}</td>
+            <td align="left">{{ item['title'] }}</td>
+            <td align="left">{{ item['des'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
